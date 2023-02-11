@@ -10,12 +10,25 @@
 </head>
 <body>
     <div class="title">Etch-a-Sketch</div>
-    <div class="content"></div>
-        <div class="board"></div>
-        <div class="buttons">
-            <button value="16" class="button">Small</button>
-            <button value="32" class="button">Medium</button>
-            <button value="64" class="button">Big</button>
+    <div class="content">
+        <div class="board-container">
+            <div class="board"></div>
         </div>
+        <div class="drawing"></div>
+        <div class="colorMode">Color: black</div>
+        <div class="button-container">
+            <div class="buttons">
+                <button value="16" class="button">Small</button>
+                <button value="32" class="button">Medium</button>
+                <button value="64" class="button">Big</button>
+            </div>
+            <div class="colors">
+                <button onclick="changeColor('black')" class="color">Black</button>
+                <button onclick="changeColor('white')" class="color">White</button>
+                <button onclick="changeColor('grey')" class="color">Grey</button>
+                <button onclick="changeColor('rainbow')" class="randomColor">Rainbow</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

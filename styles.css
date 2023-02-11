@@ -1,6 +1,35 @@
+body {
+    background-color: #FFEBB7;
+}
+
 .board {
-    height: 500px;
-    width: 500px;
+    height: 400px;
+    width: 400px;
     display: grid;
     border-style: solid;
+    background-color: white;
+    margin: 0;
+    padding: 0;
 }
+
+.board-container {
+    display: flex;
+    justify-content: center;
+}
+
+.title  {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-family:'Marker Felt',fantasy;
+    background-color: #243763;
+    color: #FF6E31;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
