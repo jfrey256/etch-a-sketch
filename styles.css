@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'lilita';
+    src: url(LilitaOne-Regular.ttf);
+}
+
 body {
     background-color: #FFEBB7;
 }
@@ -6,10 +11,12 @@ body {
     height: 400px;
     width: 400px;
     display: grid;
-    border-style: solid;
     background-color: white;
     margin: 0;
     padding: 0;
+    border-style: groove;
+    border-color: #FF6E31;
+    border-width: 10px;
 }
 
 .board-container {
@@ -20,16 +27,81 @@ body {
 .title  {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
-    font-size: 50px;
-    font-family:'Marker Felt',fantasy;
+    font-size: 80px;
+    font-family: 'lilita', sans-serif;
     background-color: #243763;
     color: #FF6E31;
 }
 
 .button-container {
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.button, .color, .removeGrid {
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #FF6E31;
+    color: #243763;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    width: 75px;
+    font-weight: bold;
+}
+
+button:hover {
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1.15);
+}
+
+.button.active {
+    background-color: #243763;
+    color: #FF6E31;
+    transform: scale(1.15);
+}
+
+.color.active {
+    background-color: #243763;
+    color: #FF6E31;
+    transform: scale(1.15);
+}
+
+.buttons {
+    display: flex;
+}
+
+.colors {
+    display: flex;
+}
+
+.header {
+    height: 150px;
+    background-color: #243763;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+    margin-top: 0;
+    
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.color-text, .size-text {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color: #243763;
+}

@@ -1,5 +1,8 @@
 const newSize = document.querySelectorAll(".button");
 let color = "black";
+const colorButton = document.querySelectorAll(".color");
+const removeGrid = document.querySelector(".removeGrid");
+const addGrid = document.querySelector(".addGrid");
 
 let isMouseDown = false;
 
@@ -26,21 +29,23 @@ function makeBoard(size) {
     for (let i = 0; i < amount; i ++) {
         let div = document.createElement("div");
         div.addEventListener('mouseover', colorSquare)
-        div.style.borderStyle = "solid";
-        div.style.borderColor = "grey";
         board.insertAdjacentElement('beforeend',div);
    }
 }
 
-makeBoard(16);
 
+makeBoard(16);
+// Change board size
  newSize.forEach(button => button.addEventListener("click", () => {
     let choice = button.value;
     makeBoard(choice);
-}))
+// Color active button
+    newSize.forEach(btn => btn.classList.remove("active"));
+    button.classList.add("active");
+}));
 
 // Random RGB coloring
-const randomColorButton = document.querySelector(".randomColor");
+const randomColorButton = document.querySelector("#randomColor");
 randomColorButton.addEventListener("click", () => {
     color = "random";
 });
@@ -58,12 +63,10 @@ function colorSquare() {
 // Display current color selection
 let colorMode = document.querySelector(".colorMode");
 let colorClicked = document.querySelector(".color");
+
 function changeColor(colorChoice) {
     color = colorChoice
-    colorMode.textContent = `Color: ${color}`;
 }
-
-
 
 // Display drawing mode and if active
 
@@ -77,15 +80,19 @@ function drawingMode() {
     }
 }
 
+// Change color buttons active style
+colorButton.forEach(color => color.addEventListener("click",() => {
+    colorButton.forEach(color => color.classList.remove("active"));
+    color.classList.add("active");
+}));
 // Reset board
 
-const resetButton = document.createElement("button");
-resetButton.textContent = "Reset";
-document.body.insertAdjacentElement('beforeend', resetButton);
+const resetButton = document.querySelector(".resetButton");
 resetButton.addEventListener("click", () => {
   makeBoard(16);
+  color = "black";
+  colorButton.forEach(color => color.classList.remove("active"));
+  newSize.forEach(btn => btn.classList.remove("active"));
 });
-
-
 
 
