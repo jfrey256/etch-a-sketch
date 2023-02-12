@@ -115,4 +115,8 @@ html, body {
     .title {
       font-size: 60px;
     }
+    button {
+        font-size: 10px;
+        width: 50px;
+    }
   }
