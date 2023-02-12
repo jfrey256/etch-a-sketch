@@ -39,6 +39,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .button, .color, .removeGrid {
@@ -106,6 +107,11 @@ html, body {
     color: #243763;
 }
 
+body {
+    flex-wrap: wrap;
+}
+
+/*
 @media only screen and (max-width: 500px) {
     .board {
       height: 300px;
