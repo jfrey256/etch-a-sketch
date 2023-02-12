@@ -1,3 +1,14 @@
+@media only screen and (max-width: 500px) {
+    .board {
+      height: 300px;
+      width: 300px;
+    }
+    
+    .title {
+      font-size: 60px;
+    }
+  }
+
 @font-face {
     font-family: 'lilita';
     src: url(LilitaOne-Regular.ttf);
