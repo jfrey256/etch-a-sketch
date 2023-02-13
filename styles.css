@@ -113,8 +113,8 @@ body {
 
 @media only screen and (max-width: 500px) {
     .board {
-      height: 100px;
-      width: 100px;
+      height: 300px;
+      width: 300px;
     }
     
     .title {
@@ -122,6 +122,6 @@ body {
     }
     button {
         font-size: 10px;
-        width: 40px;
+        width: 60px;
     }
   }
