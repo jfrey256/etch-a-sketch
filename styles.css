@@ -111,6 +111,13 @@ body {
     flex-wrap: wrap;
 }
 
+.footer {
+    background-color: #AD8E70;
+    height: 50px;
+    width: 100%;
+    margin-top: 30px;
+}
+
 @media only screen and (max-width: 500px) {
     .board {
       height: 300px;
@@ -118,9 +125,18 @@ body {
     }
     
     .title {
-      font-size: 20px;
+      font-size: 50px;
     }
     button {
-        width: auto;
+        width: 40px;
+        font-size: 10px;
+        font-weight: lighter;
+        padding: 2px;
+    }
+    .color-text, .size-text {
+        font-size: 15px;
+    }
+    .button, .color {
+        margin: 3px;
     }
   }
